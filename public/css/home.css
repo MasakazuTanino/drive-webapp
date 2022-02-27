@@ -1,0 +1,33 @@
+.main-wrapper-margin {
+  margin: 0 50px;
+}
+
+.search-form {
+  display: flex;
+}
+
+.select-home{
+  /* margin: 10px 10px 10px 0; */
+  height: 30px;
+  width: 210px;
+}
+
+.list-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-box {
+  padding: 0.5em 1em;
+  margin: 2em 10px;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+.image-size{
+  height: 282px;
+  width: 376px;
+  object-fit: cover;
+}

@@ -1,0 +1,50 @@
+.main-wrapper-detail {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+}
+
+.detail-contents {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-box-detail {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+.google-map {
+  height: 400px;
+  width: 600px;
+}
+
+.list-comment-detail {
+  padding: 2em 2em;
+}
+
+.comment-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-item {
+  background-color: #eff0f1;
+}
+
+.detail-btn {
+  background: none;
+border: none;
+outline: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+  opacity: 0.7;
+  font-size: 10px;
+  color: red;
+}
