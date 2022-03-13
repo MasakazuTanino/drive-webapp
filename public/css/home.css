@@ -7,7 +7,6 @@
 }
 
 .select-home{
-  /* margin: 10px 10px 10px 0; */
   height: 30px;
   width: 210px;
 }
@@ -21,7 +20,6 @@
   padding: 0.5em 1em;
   margin: 2em 10px;
   font-weight: bold;
-  background: #FFF;
   border: solid 1px;
   border-radius: 10px;
 }
@@ -30,4 +28,37 @@
   height: 282px;
   width: 376px;
   object-fit: cover;
+}
+
+@media only screen and (max-width:600px) {
+  .main-wrapper-margin {
+    margin: 0 8px;
+  }
+  
+  .search-form {
+    display: flex;
+  }
+  
+  .select-home{
+    height: 24px;
+    width: 80px;
+  }
+  
+  .list-content{
+    
+  }
+  
+  .list-box {
+    padding: 0.5em 1em;
+    margin: 1em;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 10px;
+  }
+  
+  .image-size{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }

@@ -13,7 +13,7 @@
             <input type="text" name="search_place_name">
             <div>
                 <select class="select-home" aria-label="Default select example" name="search_pref">
-                    <option selected disabled>都道府県を選択してください</option>
+                    <option selected disabled>都道府県</option>
                     <optgroup label="北海道">
                         <option value="1">北海道</option>
                     </optgroup>
