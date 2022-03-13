@@ -6,23 +6,19 @@
   padding: 1em 1em;
   margin: 2em 10px;
   font-weight: bold;
-  background: #FFF;
   border: solid 1px;
   border-radius: 10px;
 }
 
-.margin-add{
-  margin: 15px 0;
-}
-
-.select-add{
+.select-pref-add{
   height: 37px;
-  margin: 10px 10px 10px 0;
   width: 210px;
+  margin: 16px;
 }
 
 .picture{
   display: flex;
+  align-items: center;
 }
 
 .btn-label-add{
@@ -42,20 +38,26 @@
 }
 
 .btn-remake-name{
-  margin: 10px 10px 10px 0;
-  padding: 1px 2px 1px 2px;
+  margin: 10px;
+  padding: 1px 2px;
 }
 
 .picture-clear{
   display: none;
-  margin: 10px 0 0;
-  text-decoration: underline;
-  font-weight: bold;
+  margin: 10px 0;
   cursor: pointer;
+  opacity: 0.7;
+  font-size: 12px;
+  color: red;
 }
 
-.add-btn:hover{
-  color: rgb(184, 184, 184);
+.add-btn{
+  border:none;
+  box-shadow:none;
+  background:#24a0f3;
+  color: #fff;
+  padding:8px 12px;
+  border-radius: 4px;
 }
 
 .parking-add{
@@ -64,4 +66,84 @@
 
 .form-check{
   margin: 0 10px;
+}
+
+.go-home{
+  float: right;
+}
+
+@media only screen and (max-width:600px) {
+  .main-wrapper-add {
+    margin: 0 8px;
+  }
+  
+  .list-box-add{
+    padding: .5em .5em;
+    margin: 1em 8px;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 10px;
+  }
+  
+  .select-pref-add{
+    height: 37px;
+    width: 210px;
+    margin: 16px;
+  }
+  
+  .picture{
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-label-add{
+    margin: 10px 10px 10px 0;
+    padding: 1px 2px 1px 2px;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 4px;
+  }
+  
+  .btn-remake{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  .btn-remake-name{
+    margin: 10px;
+    padding: 1px 2px;
+  }
+  
+  .picture-clear{
+    display: none;
+    margin: 10px 0;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 12px;
+    color: red;
+  }
+  
+  .add-btn{
+    border:none;
+    box-shadow:none;
+    background:#24a0f3;
+    color: #fff;
+    padding:8px 12px;
+    border-radius: 4px;
+  }
+  
+  .parking-add{
+    display: flex;
+  }
+  
+  .form-check{
+    margin: 0 10px;
+  }
+  
+  .go-home{
+    float: right;
+  }
 }

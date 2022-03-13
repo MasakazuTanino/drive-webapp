@@ -4,7 +4,7 @@
 <div class="main-wrapper-add">
     <h1>投稿フォーム</h1>
     <div class="list-box-add">
-        <form class="" action="{{ route('adds.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('adds.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- 場所の名称 --}}
@@ -16,10 +16,10 @@
             {{-- 投稿画像の処理 --}}
             <div class="picture">
                 <label class="btn-label-add">
-                    <input class="btn-remake"type="file" name="img_url" accept="image/jpeg,image/png" required class="col-md-4 col-form-label text-md-right mx-auto">写真を選択してください
+                    <input class="btn-remake"type="file" name="img_url" accept="image/jpeg,image/png" required class="col-md-4 col-form-label text-md-right mx-auto">写真を選択
                 </label>
                 <div class="btn-remake-name">写真が選択されていません</div>
-                <div class="picture-clear btn-remake-clear">選択した写真をクリア</div>
+                <div class="picture-clear btn-remake-clear">写真をクリア</div>
             </div>
 
             {{-- 駐車場 --}}
@@ -50,8 +50,8 @@
             </div>
 
             {{-- 都道府県--}}
-            <div>
-                <select class="select-add" aria-label="Default select example" name="pref">
+            <div class="select-pref-add">
+                <select aria-label="Default select example" name="pref">
                     <option selected disabled>都道府県を選択してください</option>
                     <optgroup label="北海道">
                         <option value="1">北海道</option>
@@ -132,80 +132,81 @@
 
             <button class="add-btn" type="submit" onclick="addSuccess()">現在地を追加して投稿</button>
         </form>
-
-        <script>
-
-            function addSuccess() {
-                alert("スポットを追加しました！");
-            }
-
-            if( navigator.geolocation )
-            {
-                navigator.geolocation.getCurrentPosition(
-
-                    function( position )
-                    {
-                        var data = position.coords ;
-
-                        var lat = data.latitude ;
-                        var lng = data.longitude ;
-                        document.getElementById( 'lat_id' ).value = lat;
-                        document.getElementById( 'lng_id' ).value = lng;
-
-                    },
-
-                    function( error )
-                    {
-                        var errorInfo = [
-                            "原因不明のエラーが発生しました…。" ,
-                            "位置情報の取得が許可されませんでした…。" ,
-                            "電波状況などで位置情報が取得できませんでした…。" ,
-                            "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。"
-                        ] ;
-
-                        var errorNo = error.code ;
-
-                        var errorMessage = "[エラー番号: " + errorNo + "]\n" + errorInfo[ errorNo ] ;
-
-                        alert( errorMessage ) ;
-
-                    } ,
-
-                    {
-                        "enableHighAccuracy": false,
-                        "timeout": 8000,
-                        "maximumAge": 2000,
-                    }
-
-                ) ;
-            }
-
-            else
-            {
-                var errorMessage = "お使いの端末は、GeoLacation APIに対応していません。" ;
-
-                alert( errorMessage ) ;
-
-            }
-
-        </script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-        $(function() {
-          $('.btn-remake').on('change', function () {
-            let file = $(this).prop('files')[0];
-            $('.btn-remake-name').text(file.name);
-            $('.btn-remake-clear').show();
-          });
-          $('.btn-remake-clear').click(function() {
-            $('.btn-remake').val('');
-            $('.btn-remake-name').text('ファイルが未選択です');
-            $(this).hide();
-          });
-        });
-        </script>
     </div>
+    <a class="go-home" href="{{ url('/') }}">ホームへ</a>
 </div>
+
+<script>
+
+function addSuccess() {
+    alert("スポットを追加しました！");
+}
+
+if( navigator.geolocation )
+{
+    navigator.geolocation.getCurrentPosition(
+
+        function( position )
+        {
+            var data = position.coords ;
+
+            var lat = data.latitude ;
+            var lng = data.longitude ;
+            document.getElementById( 'lat_id' ).value = lat;
+            document.getElementById( 'lng_id' ).value = lng;
+
+        },
+
+        function( error )
+        {
+            var errorInfo = [
+                "原因不明のエラーが発生しました…。" ,
+                "位置情報の取得が許可されませんでした…。" ,
+                "電波状況などで位置情報が取得できませんでした…。" ,
+                "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。"
+            ] ;
+
+            var errorNo = error.code ;
+
+            var errorMessage = "[エラー番号: " + errorNo + "]\n" + errorInfo[ errorNo ] ;
+
+            alert( errorMessage ) ;
+
+        } ,
+
+        {
+            "enableHighAccuracy": false,
+            "timeout": 8000,
+            "maximumAge": 2000,
+        }
+
+    ) ;
+}
+
+else
+{
+    var errorMessage = "お使いの端末は、GeoLacation APIに対応していません。" ;
+
+    alert( errorMessage ) ;
+
+}
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(function() {
+$('.btn-remake').on('change', function () {
+let file = $(this).prop('files')[0];
+$('.btn-remake-name').text(file.name);
+$('.btn-remake-clear').show();
+});
+$('.btn-remake-clear').click(function() {
+$('.btn-remake').val('');
+$('.btn-remake-name').text('写真が未選択です');
+$(this).hide();
+});
+});
+</script>
 
 @endsection

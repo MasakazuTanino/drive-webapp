@@ -12,7 +12,7 @@
             @csrf
             <input type="text" name="search_place_name">
             <div>
-                <select class="select-home" aria-label="Default select example" name="search_pref">
+                <select class="select-pref" aria-label="Default select example" name="search_pref">
                     <option selected disabled>都道府県</option>
                     <optgroup label="北海道">
                         <option value="1">北海道</option>
@@ -94,10 +94,13 @@
     <div class="list-content">
         @foreach ( $list_values as $list_value )
         <div class="list-box">
+            <div>
                 <img class="image-size" src="{{ $list_value->img_url }}">
-                <p>{{ $list_value->place_name }}</p>
-                <p>{{ $pref_zip[$list_value->pref] }}</p>
-                <a href="{{ route('details.index', $list_value->id)}}">詳細ページ</a>
+            </div>
+                
+            <p>{{ $list_value->place_name }}</p>
+            <p>{{ $pref_zip[$list_value->pref] }}</p>
+            <a href="{{ route('details.index', $list_value->id)}}">詳細ページ</a>
             </div>
         @endforeach
     </div>

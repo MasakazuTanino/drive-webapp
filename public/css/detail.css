@@ -1,20 +1,12 @@
-.main-wrapper-detail {
-  display: flex;
-  flex-direction: column;
-  margin: 0 50px;
-}
 
 .detail-contents {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+  margin: 0 50px;
 }
 
 .list-box-detail {
   padding: 0.5em 1em;
-  margin: 2em 0;
+  margin: 2em 1em;
   font-weight: bold;
-  background: #FFF;
   border: solid 1px;
   border-radius: 10px;
 }
@@ -26,6 +18,8 @@
 
 .list-comment-detail {
   padding: 2em 2em;
+  font-weight: normal;
+  font-size: 16px;
 }
 
 .comment-detail {
@@ -33,18 +27,88 @@
   justify-content: space-between;
 }
 
-.comment-item {
-  background-color: #eff0f1;
+.delete-comment-btn {
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0.7;
+  font-size: 12px;
+  color: red;
 }
 
-.detail-btn {
-  background: none;
-border: none;
-outline: none;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-  opacity: 0.7;
-  font-size: 10px;
-  color: red;
+.comment-area{
+  vertical-align: bottom;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.add-comment-btn{
+  vertical-align: bottom;
+  border:none;
+  box-shadow:none;
+  background:#24a0f3;
+  color:#ffffff;
+  padding:3px 6px;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width:600px) {
+  .detail-contents {
+    margin: 0 8px;
+  }
+  
+  .list-box-detail {
+    padding: .5em 1em;
+    margin: 1em .5em;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 10px;
+  }
+  
+  .google-map {
+    height: 180px;
+    width: calc(100% - 16px);
+  }
+  
+  .list-comment-detail {
+    padding: .5em .5em;
+    font-weight: normal;
+  }
+  
+  .comment-detail {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .delete-comment-btn {
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0.7;
+    font-size: 12px;
+    color: red;
+  }
+
+  .comment-area{
+    vertical-align: bottom;
+    border: 1px solid;
+    border-radius: 4px;
+  }
+  
+  .add-comment-btn{
+    vertical-align: bottom;
+    border:none;
+    box-shadow:none;
+    background:#24a0f3;
+    color:#ffffff;
+    margin-top: 8px;
+    padding:3px 6px;
+    border-radius: 4px;
+  }
 }

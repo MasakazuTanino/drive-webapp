@@ -6,7 +6,7 @@
   display: flex;
 }
 
-.select-home{
+.select-pref{
   height: 30px;
   width: 210px;
 }
@@ -30,6 +30,11 @@
   object-fit: cover;
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+}
+
 @media only screen and (max-width:600px) {
   .main-wrapper-margin {
     margin: 0 8px;
@@ -37,15 +42,12 @@
   
   .search-form {
     display: flex;
+    height: 30px;
+    white-space: nowrap;
   }
   
-  .select-home{
-    height: 24px;
+  .select-pref{
     width: 80px;
-  }
-  
-  .list-content{
-    
   }
   
   .list-box {
@@ -60,5 +62,10 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
   }
 }
