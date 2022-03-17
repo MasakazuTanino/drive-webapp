@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="parking" id="flexRadioDefault3" value="2">
-                        <label class="form-check-label" for="flexRadioDefault3">無</label>
+                        <label class="form-check-label" for="flexRadioDefault3">無し</label>
                     </div>
                 </div>
             </div>
