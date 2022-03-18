@@ -42,7 +42,8 @@
 自身のコメントと他人のコメントを判別して、自身のものは削除出来るようにした。
 
 ## ローカル環境構築の手順
-* xamppまたはmampをインストール(PHPのバージョンは上記の使用技術を参照)
+* xamppまたはmampをCドライブ直下にインストール(PHPのバージョンは上記の使用技術を参照)
+* "C:/xampp/htdocs"の直下に"drive-webapp"をコピー
 * ドキュメントルートを"C:/xampp/htdocs/drive-webapp/public"に変更
 * localhostの指定されたポート番号に接続
 
