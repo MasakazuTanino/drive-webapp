@@ -21,6 +21,7 @@
             </div>
 
             <div  class="list-box-detail google-map" id="map"></div>
+            <a class="maps-url" href="https://www.google.com/maps/search/?api=1&query={{ $detailed_value->lat}}%2C{{ $detailed_value->lng}}">Google Mapで開く</a>
 
             <h2>コメント</h2>
             <div class="list-box-detail list-comment-detail">
